@@ -38,7 +38,7 @@ li{
 }
 .search-wrapper {
     position: relative;
-    width: 250px; /* عرض دلخواه */
+    width: 330px; /* عرض دلخواه */
 }
 
 .search-wrapper .search-input {
@@ -51,7 +51,7 @@ li{
 
 .search-wrapper .btn-search {
     position: absolute;
-    right: 240px;
+    right: 322px;
     top: 50%;
     transform: translateY(-50%);
     border: none;
@@ -299,7 +299,14 @@ a{
 }
 
 .newest {
-  background-color: #fff; /* رنگ ملایم آبی */
+  background-color: #fff;
+  /*رنگملایمآبی*/border-bottom: 1px solid #ccc;
+  border-radius:0 ;
+  -webkit-border-radius:0 ;
+  -moz-border-radius:0 ;
+  -ms-border-radius:0 ;
+  -o-border-radius:0 ;
+  height: 280px;
 }
 
 /* گرید محصولات */
@@ -326,6 +333,7 @@ a{
 .cart2{
   background-color: #fff;
   box-shadow: none;
+  height: 70px;
 }
 .product-card img {
   width: 55%;
@@ -361,4 +369,99 @@ a{
 .btn-add:hover {
   background-color: #b3001a;
 }
+ .beners{
+  display: flex;
+  gap: 20px;
+ } 
+ .bener-img{
+  width: 100%;
   
+ }
+ /*footer code*/
+ .footer{
+  background-color: #212121;
+  color: #fff;
+ }
+ .email-field{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 2px solid #ccc;
+ }
+ .email-title-div{
+  margin-right: 150px;
+ }
+ .email-input{
+  margin-left: 200px;
+ }
+ .input-email{
+  width: 550px;
+  height: 35px;
+ }
+ .btn-email{
+  width: 115px;
+  height: 40px;
+  background-color: #0277BD;
+  color: #fff;
+  border: 1px solid #0277BD;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  font-size: 17px;
+  cursor: pointer;
+}
+.logo-footer{
+ width: 100px;
+ height: 100px;
+}
+.abutus-paragraph{
+  line-height: 25px;
+  font-size: 17px;
+}
+.footer-page{
+  display: grid;
+  grid-template-columns: 25% 20% 30% 25%;
+  gap: 70px;
+  padding-right: 15px;
+}
+
+.contact-us {
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.contactus-div {
+  max-width: 500px;
+  margin: auto;
+}
+
+.contactus-title {
+  margin-top: 1px;
+  margin-bottom: 60px;
+  font-size: 1.3rem;
+}
+
+.contact-links {
+  display: flex;       /* قرار دادن لینک‌ها در یک ردیف */
+  flex-direction: column; /* عمودی بودن */
+  gap: 25px;           /* فاصله بین لینک‌ها */
+  margin-bottom: 15px; /* فاصله با آدرس */
+}
+
+.contact-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-links a:hover {
+  color: #FF6600; /* تغییر رنگ هنگام هاور */
+}
+
+.address {
+  font-size: 1rem;
+  line-height: 2;
+}
