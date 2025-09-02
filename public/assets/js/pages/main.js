@@ -50,3 +50,18 @@ function resetInterval() {
   clearInterval(autoSlide);
   autoSlide = setInterval(nextSlide, 5000);
 }
+//جدید ترین محصولات
+const slider = document.querySelector('.products-grid.slider');
+const nextBtn1 = document.querySelector('.next-btn');
+const prevBtn1 = document.querySelector('.prev-btn');
+
+const cardWidth = 240; // عرض هر کارت + فاصله تقریبی
+let scrollAmount = 0;
+
+nextBtn.addEventListener('click', () => {
+  slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+});
+
+prevBtn.addEventListener('click', () => {
+  slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+});

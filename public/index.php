@@ -7,59 +7,17 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header-head">
-            <div class="header-right">
-                <img src="assets/images/logo.jpeg" alt="لوگو" class="logo">
-                <div class="search-wrapper">
-                    <input type="text" class="search-input" placeholder="جستجوی محصول...">
-                    <button class="btn-search">جستجو</button>
-                </div>       
-            </div>
-            <div class="header-left">
-                <a href="#">لیست علاقه مندی</a>
-                <a href="#">سبد خرید</a>
-                <div class="divider1"></div>
-                <div class="auth-buttons">
-                    <button class="btn-login">ورود</button>
-                    <div class="divider"></div>
-                    <button class="btn-register">ثبت نام</button>
-                </div>
-            </div>
-        </div>
-        <div class="header-main">
-            <nav class="category-menu">
-                <ul>
-                    <li class="category-item">
-                        لوازم برقی
-                        <ul class="subcategory">
-                            <li><a href="">تلویزیون</a></li>
-                            <li><a href="">یخچال</a></li>
-                            <li><a href="">ماشین لباسشویی</a></li>
-                        </ul>
-                    </li>
-                    <li class="category-item">
-                        لوازم آشپزخانه
-                        <ul class="subcategory">
-                            <li><a href="">مایکروویو</a></li>
-                            <li><a href="">ابمیوه گیری</a></li>
-                            <li><a href="#">ظروف آشپزخانه</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            
-            
-        </div>
-        <div class="header-foot">
+<?php include 'includes/header.php'; ?> 
+    
+<div class="header-foot">
             <div class="slider">
                 <div class="slides">
                   <div class="slide active">
-                    <img src="assets/images/slid1.jpg" alt="محصول ۱">
+                    <a href="#"><img src="assets/images/slid1.jpg" alt="محصول ۱"></a>
                     <!-- <div class="slide-caption">عنوان محصول ۱</div> -->
                   </div>
                   <div class="slide">
-                    <img src="assets/images/slide2.jpg" alt="محصول ۲">
+                    <a href="#"><img src="assets/images/slide2.jpg" alt="محصول ۲"></a>
                     <!-- <div class="slide-caption">عنوان محصول ۲</div> -->
                   </div>
                   <!-- <div class="slide">
@@ -81,11 +39,6 @@
               </div>
               
         </div>
-    </header>
-    <div class="container">
-        <main class="main">
-            <div class="container">
-
                 <!-- پیشنهاد شگفت انگیز -->
                 <section class="products-section amazing">
                   <h2>پیشنهاد شگفت‌انگیز</h2>
@@ -140,6 +93,14 @@
                       <span class="price">۳۸۰,۰۰۰ تومان</span>
                       <button class="btn-add">افزودن به سبد</button>
                     </div>
+                    <div class="product-card cart2">
+                      <img src="assets/images/product6.jpg" alt="محصول ۶">
+                      <h3>محصول ۶</h3>
+                      <p>توضیح کوتاه محصول</p>
+                      <span class="price">۳۸۰,۰۰۰ تومان</span>
+                      <button class="btn-add">افزودن به سبد</button>
+                    </div>
+                    
                   </div>
                 </section>
                 <div class="beners">
@@ -154,54 +115,7 @@
                             
         </main>
     </div>
-    <footer class="footer">
-      <div class="email-field">
-        <div class="email-title-div">
-          <h2 class="email-title">مشترک شدن در خبرنامه</h2>
-          <p class="email-paragaph">آخرین خبرنامه مربوط به فروشگاه راه دریافت کنید</p>
-        </div>
-        <div class="email-input">
-          <input type="text" class="input-email" placeholder="آدرس ایمیل شما">
-          <button class="btn-email">مشترک شدن</button>
-        </div>
-      </div>
-      <div class="footer-page">
-        <div class="logo-abutus">
-          <img src="assets/images/logo2.png" alt="" class="logo-footer">
-          <h3 class="abutus-title">درباره ظریفی استور</h3>
-          <p class="abutus-paragraph">فروشگاه ظریفی استور با هدف ارائه لوازم خانگی با کیفیت و قیمت مناسب به مشتریان عزیز در سراسر ایران فعالیت می‌کند. ما تلاش می‌کنیم تجربه خریدی ساده، مطمئن و لذت‌بخش را برای شما فراهم کنیم. تعهد ما رضایت مشتری و ارائه محصولات اصل با خدمات پس از فروش مطمئن است.</p>
-        </div>
-        <div class="contact-us">
-          <div class="contactus-div">
-            <h3 class="contactus-title">راه های ارتباطی با فروشگاه</h3>
-        
-            <div class="contact-links">
-              <a href="#" class="landline">08736232222</a>
-              <a href="#" class="mobile1">09189495100 (ظریفی)</a>
-              <a href="#" class="mobile2">09375392403 (ظریفی)</a>
-            </div>
-        
-            <p class="address">
-              کردستان سقز, شهر سقز، خیابان امام، راسته بازار اردلان، میدان غله و تربار سابق
-            </p>
-          </div>
-        </div>
-        <div class="pages-site">
-          <div class="website-page">
-            <h3 class="page-title">خدمات مشتریان</h3>
-            <div class="page-link">
-              <a href="#" class="abutus-link">درباره ما</a>
-              <a href="#" class="contactus-link">سوالات متداول</a>
-              <a href="#" class="contactus-link">شرایط و قوانین</a>
-              <a href="#" class="contactus-link">حریم خصوصی</a>
-              <a href="#" class="contactus-link">ارسال و تحویل</a>
-              <a href="#" class="contactus-link">پیگیری سفارش</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </footer>
+    <?php include 'includes/footer.php'; ?>
     <script src="assets/js/pages/main.js"></script>
 </body>
 </html>
