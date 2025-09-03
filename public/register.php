@@ -34,7 +34,7 @@
                     <input type="text" id="register-captcha-input" placeholder="کد امنیتی">
                     <span class="error" id="register-captcha-error"></span>
                 </div>
-                <button type="submit" class="btn-submit">ثبت نام</button>
+                <button type="button" class="btn-submit" id="register-btn">ثبت نام</button>
                 <p class="switch-text">حساب کاربری دارید؟ <a href="login.php">ورود</a></p>
             </form>
         </div>

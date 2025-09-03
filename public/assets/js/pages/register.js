@@ -92,3 +92,17 @@ registerForm.addEventListener('submit', (e) => {
         registerCaptchaBox.textContent = registerCaptcha;
     }
 });
+document.getElementById('register-btn').addEventListener('click', function (e) {
+    e.preventDefault(); // جلوگیری از رفرش
+    const phone = document.getElementById('register-email').value.trim();
+    
+    if (phone) {
+        // انتقال به صفحه verify.html و ارسال شماره موبایل
+        window.location.href = `verify.html?phone=${encodeURIComponent(phone)}`;
+    } else {
+        alert('لطفاً شماره موبایل را وارد کنید');
+    }
+});
+const params = new URLSearchParams(window.location.search);
+const phone = params.get('phone');
+document.getElementById('phone-display').textContent = phone ? phone : 'شماره نامشخص';
