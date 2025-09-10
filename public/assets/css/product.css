@@ -27,10 +27,14 @@
 
     #main-image {
       width: 100%;
-      max-width: 400px;
+      max-width: 300px;
       border-radius: 10px;
-      margin-bottom: 15px;
-    }
+      margin-bottom: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+}
 
     .thumbnails {
       display: flex;
@@ -77,6 +81,7 @@
 
     /* بخش خرید */
     .product-purchase {
+      width: 300px;
       background-color: #ccc;
       height: 370px;
       padding-right: 20px;
@@ -183,11 +188,74 @@
         margin-bottom:20px;
         font-size: 16px;
         color: #333;
-        gap: 50px;
+        gap: 40px;
         
       }
       
       .price-row:last-child {
         margin-bottom: 0;
       }
+      .product-info-wrapper{
+        border-bottom: 5px solid #ccc;
+        width: 100%; /* کل عرض صفحه */
+        padding-bottom: 15px;
+        margin-bottom: 55px;
+      }
+      .product-info {
+        display: flex;
+        justify-content: space-between; /* فاصله یکسان بین آیتم‌ها */
+        max-width: 1200px;
+        margin: 20px auto; /* وسط چین کردن container */
+        flex-wrap: nowrap; /* اجازه نده بره خط بعد */
+        box-sizing: border-box;
+      }
       
+      .info-item {
+        flex: 1; /* هر آیتم فضای مساوی بگیره */
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+        color: #757575;
+      }
+      .product-tabs{
+        margin-top: 40px;
+        max-width: 1200px;
+        padding: 20px auto;
+        margin: 20px auto;
+      }
+      .tab-buttons{
+        display: flex;
+        gap: 10px;
+        border-bottom: 2px solid #ccc;
+        margin-bottom: 15px;
+      }
+      .tab-buttons .tab-btn{
+        flex: 1;
+        padding: 10px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        font-size: 19px;
+        color: #555;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+      }
+      .tab-buttons .tab-btn:hover{
+         color: #007bff;
+      }
+      .tab-buttons .tab-btn.active{
+       color: #007bff;
+       border-bottom: 3px solid #007bff;
+       font-weight: bold;
+       }
+       .tab-content .tab-panel{
+        display: none;
+        color: #333;
+        line-height: 1.7;
+       }
+       .tab-content .tab-panel.active{
+        display: block;
+       }
