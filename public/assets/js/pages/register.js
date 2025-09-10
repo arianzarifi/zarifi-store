@@ -98,7 +98,7 @@ document.getElementById('register-btn').addEventListener('click', function (e) {
     
     if (phone) {
         // انتقال به صفحه verify.html و ارسال شماره موبایل
-        window.location.href = `verify.html?phone=${encodeURIComponent(phone)}`;
+        window.location.href = `verify.php?phone=${encodeURIComponent(phone)}`;
     } else {
         alert('لطفاً شماره موبایل را وارد کنید');
     }
