@@ -93,7 +93,7 @@
     <button class = "tab-btn" data-tab="reviews">نظرات</button>
   </div>
   <div class = "tab-content">
-    <div class = "tab-panel" id = "description">
+    <div class = "tab-panel active" id = "description">
       <p>
       جاروبرقی دوو مدل DVC-LH22R یک وسیله برقی است که برای تمیز کردن محیط‌های مختلف
        استفاده می‌شود. این جاروبرقی دارای ظرفیت ۵ لیتری برای جمع‌آوری گرد و غبار است که این امکان را به کاربر می‌دهد تا بدون نیاز به تخلیه مکرر آن را استفاده کند. همچنین، این جاروبرقی دارای سیم برق ۸ متری است که این ویژگی به کاربر اجازه می‌دهد تا به راحتی در محیط‌های مختلف از آن استفاده کند بدون نیاز به تغییر مکان پریز برق. قدرت مکش این جاروبرقی ۶۵۰ وات است که این مقدار قدرت مکش بالا به کاربر امکان می‌دهد تا حتی از ذرات‌ریز و بزرگ گرد و غبار را به راحتی جمع‌آوری کند. موتور این جاروبرقی دارای قدرت ۲۱۰۰ وات است که
@@ -103,15 +103,40 @@
       </p>
     </div>
     <div class="tab-panel" id="specs">
-      <ul>
-        <li>نوع جارو برقی:کیسه دار</li>
-        <li>تعداد سری: سه عدد</li>
-        <li>طول کابل برق:8 متر</li>
-        <li>میزان صدا:70 دسی بل</li>
+      <ul class = "specs-list">
+        <h4>مشخصات کلی</h4>
+        <li><span class = "label">نوع جارو برقی</span><span class = "value">کیسه دار</span></li>
+        <li><span class = "label">تعداد سری</span><span class = "value">سه عدد</span></li>
+        <li> <span class = "label">طول کابل برق</span> <span class ="value">8 متر</span></li>
+        <li> <span class = "label">میزان صدا</span> <span class = "value">70 دسی بل</span></li>
       </ul>
     </div>
     <div class="tab-panel" id="reviews">
-      <p>هنوز نظری ثبت نشده است</p>
+      <div class="comments-sendbtn">
+        <div class="sendbtn">
+          <h5>نظر خود خود را در مورد کالا ثبت کنید</h5>
+          <button class = "add-comment-btn">ثبت نظر</button>
+        </div>
+        <div class = "comments">
+          <h3>نظرات کاربران</h3>
+          <div class = "comment">
+             <div class = "author">علی</div>
+             <div class = "text">این محصول عالی بود</div>
+          </div>
+          <div class = "comment">
+             <div class = "author">سمیرا</div>
+             <div class = "text">کیفیت نسبت به قیمتش خوبه.</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="commentModal">
+        <div class="modal-content">
+          <span class="close" id="closeModal">✖</span>
+          <div class="username">نام شما: <strong>کاربر تست</strong></div>
+          <textarea placeholder="نظر خود را بنویسید"></textarea>
+          <button id="sendComment">ارسال نظر</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
