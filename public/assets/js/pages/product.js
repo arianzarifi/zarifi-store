@@ -48,3 +48,41 @@ document.getElementById('sendComment').addEventListener('click' , () =>{
   }
  
 });
+
+
+
+const decreaseBtn = document.querySelector('.quantity-decrease');
+const increaseBtn = document.querySelector('.quantity-increase');
+const quantityInput = document.querySelector('.quantity-wrapper input');
+const pricePerUnitElem = document.querySelector('.price'); // قیمت واحد
+const totalPriceElem = document.querySelector('.price-details .price-row span:nth-child(2)'); // قیمت کل
+const priceTo =document.getElementById('priceTo') ;
+// عدد قیمت واحد بدون تومان
+let pricePerUnit = parseInt(pricePerUnitElem.textContent.replace(/\D/g, ''));
+
+function updateTotalPrice() {
+  let quantity = parseInt(quantityInput.value);
+  let total = pricePerUnit * quantity;
+  let totalTo =  pricePerUnit * quantity ;
+  totalPriceElem.textContent = total.toLocaleString() + " تومان";
+
+  priceTo.textContent = total.toLocaleString() + "تومان" ;
+
+}
+
+decreaseBtn.addEventListener('click', () => {
+  let current = parseInt(quantityInput.value);
+  if(current > 1) {
+    quantityInput.value = current - 1;
+    updateTotalPrice();
+  }
+});
+
+increaseBtn.addEventListener('click', () => {
+  let current = parseInt(quantityInput.value);
+  quantityInput.value = current + 1;
+  updateTotalPrice();
+});
+
+// مقدار اولیه قیمت کل
+updateTotalPrice();

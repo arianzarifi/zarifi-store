@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>صفحه اصلی | ظریفی استور</title>
+    <link rel="icon" type="image/png" href="assets/images/logo2.png">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -44,21 +45,21 @@
                   <h2>پیشنهاد شگفت‌انگیز</h2>
                   <div class="products-grid">
                     <div class="product-card">
-                      <img src="assets/images/JEP02 (7) (1).webp" alt="محصول ۱" class="img1">
+                     <a href="product.php"> <img src="assets/images/JEP02 (7) (1).webp" alt="محصول ۱" class="img1"></a>
                       <h3>آبمیوه گیری</h3>
                       <p>توضیح کوتاه محصول</p>
                       <span class="price">۳۵۰,۰۰۰ تومان</span>
                       <button class="btn-add">افزودن به سبد</button>
                     </div>
                     <div class="product-card">
-                      <img src="assets/images/product2.jpg" alt="محصول ۲">
+                     <a href="product.php"> <img src="assets/images/product2.jpg" alt="محصول ۲"></a>
                       <h3>محصول ۲</h3>
                       <p>توضیح کوتاه محصول</p>
                       <span class="price">۲۷۰,۰۰۰ تومان</span>
                       <button class="btn-add">افزودن به سبد</button>
                     </div>
                     <div class="product-card">
-                      <img src="assets/images/product3.jpg" alt="محصول ۳">
+                      <a href="product.php"><img src="assets/images/product3.jpg" alt="محصول ۳"></a>
                       <h3>محصول ۳</h3>
                       <p>توضیح کوتاه محصول</p>
                       <span class="price">۴۲۰,۰۰۰ تومان</span>

@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>صفحه محصول</title>
+  <link rel="icon" type="image/png" href="assets/images/logo2.png">
+  <link rel="stylesheet" href="assets/css/product.css">
 </head>
-<link rel="stylesheet" href="assets/css/product.css">
 <body>
 <?php include 'includes/header.php'; ?> 
 
@@ -51,7 +52,7 @@
   <!-- انتخاب تعداد -->
 <div class="quantity-wrapper">
   <div class="quantity-decrease">-</div>
-  <input type="text" value="1">
+  <input type="text" value="1" id="qty">
   <div class="quantity-increase">+</div>
 </div>
 
@@ -60,7 +61,7 @@
   <div class="price-details">
   <div class="price-row">
     <span>قیمت کل:</span>
-    <span>8,877,100 تومان</span>
+    <span id="totalPrice">8,877,100 تومان</span>
   </div>
   <div class="price-row">
     <span>مالیات:</span>
@@ -68,7 +69,7 @@
   </div>
   <div class="price-row">
     <span>قابل پرداخت:</span>
-    <span>8,877,100 تومان</span>
+    <span id="priceTo">8,877,100 تومان</span>
   </div>
 </div>
 
@@ -132,7 +133,7 @@
       <div class="modal" id="commentModal">
         <div class="modal-content">
           <span class="close" id="closeModal">✖</span>
-          <div class="username">نام شما: <strong>کاربر تست</strong></div>
+          <div class="username">نام شما: <strong>کاربر سایت</strong></div>
           <textarea placeholder="نظر خود را بنویسید"></textarea>
           <button id="sendComment">ارسال نظر</button>
         </div>
