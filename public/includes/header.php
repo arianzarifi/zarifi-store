@@ -19,7 +19,7 @@
             </div>
             <div class="header-left">
                 <a href="#">لیست علاقه مندی</a>
-                <a href="#">سبد خرید</a>
+                <a href="cart.php">سبد خرید</a>
                 <div class="divider1"></div>
                 <div class="auth-buttons">
                     <a href="../public/login.php"><button class="btn-login">ورود</button></a>
