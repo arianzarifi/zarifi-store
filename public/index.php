@@ -70,7 +70,10 @@
               
                 <!-- جدیدترین محصولات -->
                 <section class="products-section newest">
+                  <div class = "title-newest">
                   <h2>جدیدترین محصولات</h2>
+                  <a href="products.php">محصولات بیشتر</a>
+                  </div>
                   
                   <div class="products-grid">
                     <div class="product-card cart2 ">

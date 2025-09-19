@@ -38,7 +38,7 @@ li{
 }
 .search-wrapper {
     position: relative;
-    width: 330px; /* عرض دلخواه */
+    width: 300px; /* عرض دلخواه */
 }
 
 .search-wrapper .search-input {
@@ -51,7 +51,7 @@ li{
 
 .search-wrapper .btn-search {
     position: absolute;
-    right: 322px;
+    right: 290px;
     top: 50%;
     transform: translateY(-50%);
     border: none;
@@ -308,7 +308,15 @@ a{
   -o-border-radius:0 ;
   height: 280px;
 }
-
+.title-newest{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+}
+ .title-newest a {
+  font-size: 20px;
+ }
 /* گرید محصولات */
 .products-grid {
   display: flex;
