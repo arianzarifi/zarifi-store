@@ -7,34 +7,41 @@
     <link rel="stylesheet" href="assets/css/login.css">
 </head>
 <body>
-    <div class="auth-container">
-        <div class="auth-box">
-            <h2>ورود به حساب کاربری</h2>
-            <form id="login-form">
-                <div class="form-group">
-                    <label for="login-email">شماره موبایل</label>
-                    <input type="text" id="login-email" placeholder="شماره موبایل خود را وارد کنید">
-                    <span class="error" id="login-email-error"></span>
+<div class="auth-container">
+    <div class="auth-box">
+        <h2>ورود به حساب کاربری</h2>
+        <form id="login-form" method="post">
+            <div class="form-group">
+                <label for="login-email">شماره موبایل</label>
+                <input type="text"id="login-email"placeholder="شماره موبایل خود را وارد کنید">
+                <div id="login-email-error" class="error-msg"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="login-password">رمز عبور</label>
+                <input type="password"id="login-password"placeholder="رمز عبور">
+                <div id="login-password-error" class="error-msg"></div>
+            </div>
+
+            <div class="form-group captcha-group">
+                <div class="captcha-box">
+                    <span id="login-captcha-box"></span>
+                    <button type="button" id="login-refresh-captcha">↻</button>
                 </div>
-                <div class="form-group">
-                    <label for="login-password">رمز عبور</label>
-                    <input type="password" id="login-password" placeholder="رمز عبور">
-                    <span class="error" id="login-password-error"></span>
-                </div>
-                <div class="form-group captcha-group">
-                    <div class="captcha-box">
-                        <span id="login-captcha-box"></span>
-                        <button type="button" id="login-refresh-captcha">↻</button>
-                    </div>
-                    <input type="text" id="login-captcha-input" placeholder="کد امنیتی">
-                    <span class="error" id="login-captcha-error"></span>
-                </div>
-                <button type="submit" class="btn-submit">ورود</button>
-                <p class="switch-text">حساب کاربری ندارید؟ <a href="register.php">ثبت نام</a></p>
-            </form>
-        </div>
+                <input type="text"  id="login-captcha-input"  placeholder="کد امنیتی">
+                <div id="login-captcha-error" class="error-msg"></div>
+            </div>
+
+            <button type="submit" class="btn-submit">ورود</button>
+            <p class="switch-text">
+                حساب کاربری ندارید؟
+                <a href="register.php">ثبت‌نام</a>
+            </p>
+        </form>
     </div>
-    <script src="assets/js/pages/login.js"></script>
+</div>
+<script src="assets/js/pages/login.js" defer></script>
 </body>
 </html>
+
 

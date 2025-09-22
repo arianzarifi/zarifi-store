@@ -1,3 +1,6 @@
+<?php 
+session-start() ;
+?>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>

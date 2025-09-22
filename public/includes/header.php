@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,9 +23,17 @@
                 <a href="cart.php">سبد خرید</a>
                 <div class="divider1"></div>
                 <div class="auth-buttons">
+                    
+  <div class="user-area">
+   
+       
+   
+      
                     <a href="../public/login.php"><button class="btn-login">ورود</button></a>
-                    <div class="divider"></div>
+                    
                     <a href="../public/register.php"><button class="btn-register">ثبت نام</button></a>
+   
+  </div>    
                 </div>
             </div>
         </div>
@@ -54,5 +63,6 @@
         </div>
         
     </header>
+    <script defer src="/assets/js/pages/header.js"></script>
 </body>
 </html>
