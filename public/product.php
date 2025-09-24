@@ -1,6 +1,4 @@
-<?php 
-session-start() ;
-?>
+
 <!DOCTYPE html>
 <html lang="fa">
 <head>

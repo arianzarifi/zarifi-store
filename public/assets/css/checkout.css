@@ -1,0 +1,203 @@
+.checkout-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.order-summary, .checkout-form {
+  flex: 1 1 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ورودی‌ها زیر هم */
+.checkout-form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.checkout-form input,
+.checkout-form select,
+.checkout-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* چینش استان و شهر کنار هم */
+.row {
+  display: flex;
+  gap: 15px;
+  margin-top: 12px;
+}
+.col {
+  flex: 1;
+}
+
+.btn-submit {
+  margin-top: 20px;
+  width: 100%;
+  background: #4CAF50;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn-submit:hover {
+  background: #45a049;
+}
+.row {
+  display: flex;
+  gap: 15px;
+  
+  
+}
+.col {
+  flex: 1;
+  margin-bottom: 30px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column; /* لیبل بالا، اینپوت زیر */
+  margin-bottom: 15px; 
+ }
+
+ .form-group label {
+  margin-bottom: 7px;  
+  font-weight: bold; 
+ } 
+.form-group input{
+  width: 300px;
+  height: 45px;
+}
+.form-group select{
+  width: 300px;
+  height: 45px;
+}
+.cart-summary {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border: 0.5px solid #E0E0E0;
+  height: fit-content;
+}
+
+.cart-summary h3 {
+  
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+.label{
+  font-size: 18px;
+}
+.summary-row .value {
+  min-width: 100px;
+  text-align: left;
+  direction: rtl;
+  font-size: 16px;
+}
+
+.summary-row.total {
+  font-weight: bold;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+}
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: #28a745;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.checkout-btn:hover {
+  background: #218838;
+}
+select#province {
+    font-size: 18px;  
+    color: #333;     
+    padding: 8px 12px; 
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+
+select#province option {
+    font-size: 18px;  
+    color: #000;
+}
+select#city {
+  font-size: 18px;   
+  color: #333;      
+  padding: 8px 12px; 
+  border-radius: 6px; 
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+
+select#city option {
+  font-size: 18px;  
+  color: #000;
+}
+select#user-address {
+  font-size: 18px;   
+  color: #333;       
+  padding: 8px 12px; 
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+
+select#user-address option {
+  font-size: 18px;  
+  color: #000;
+}
+
+input[type="text"],
+input[type="tel"],
+textarea,
+select {
+    font-size: 18px;
+    color: #333;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #007BFF;       
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+    outline: none;            
+}
