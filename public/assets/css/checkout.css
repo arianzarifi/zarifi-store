@@ -90,6 +90,7 @@
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
   border: 0.5px solid #E0E0E0;
   height: fit-content;
+
 }
 
 .cart-summary h3 {
@@ -178,8 +179,8 @@ select#user-address option {
   color: #000;
 }
 
-input[type="text"],
-input[type="tel"],
+input.input-check[type="text"],
+input.input-check[type="tel"],
 textarea,
 select {
     font-size: 18px;
@@ -194,10 +195,18 @@ select {
 }
 
 
-input:focus,
+input.input-check:focus,
 textarea:focus,
 select:focus {
     border-color: #007BFF;       
     box-shadow: 0 0 5px rgba(0,123,255,0.5);
     outline: none;            
+}
+label[for]:after{
+  content: "*";
+  color: red;
+  margin-right: 4px;
+}
+.error-msg{
+  color: red;
 }

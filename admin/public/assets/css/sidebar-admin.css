@@ -1,0 +1,44 @@
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.sidebar {
+    width: 260px;
+    background: #1e1e2f;
+    color: #fff;
+    transition: width 0.3s ease;
+    height: 100vh;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: sticky; /* این باعث میشه با اسکرول بالاتر نره */
+    top: 0;
+    align-self: stretch;
+  }
+  .sidebar.hidden {width: 0;}
+  .sidebar h2 {text-align: center; padding: 20px; border-bottom: 1px solid #444;}
+  .sidebar ul {list-style: none; padding: 10px;}
+  .sidebar ul li {padding: 12px; cursor: pointer; border-radius: 6px; transition: 0.3s;}
+  .sidebar ul li:hover {background: #2e2e42;}
+  .sidebar ul li .submenu {display: none; padding-right: 15px;}
+  .sidebar ul li.active .submenu {display: block;}
+  .avatar-img{
+    width: 60px ;
+    height: 60px ;
+    padding: 20px!;
+  }
+  .header-sidebar{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+  }
+  .paragraph-header-sidebar{
+    text-align: center;
+    
+  }
+  .head-sidebar{
+    font-size: 16px;
+    padding: 10px;
+  }
+ 

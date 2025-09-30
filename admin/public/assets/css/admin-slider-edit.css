@@ -1,0 +1,109 @@
+body{
+    background-color: #f4f6f9;
+}
+.layout {
+    display: flex;
+    min-height: 100vh;
+    
+  }
+  
+  
+  
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  /* محتوای اصلی */
+.content {
+    padding: 20px;
+    background: #f4f6f9;
+    min-height: calc(100vh - 60px); /* فضای زیر هدر */
+}
+
+/* تیتر صفحه */
+.content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* فرم اسلایدر */
+.slider-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* هر اسلاید */
+.slide-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.slide-item label {
+    font-size: 16px;
+    color: #555;
+}
+
+.slide-item input[type="file"] {
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* پیش نمایش تصویر */
+.slide-preview {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* دکمه ثبت */
+.btn-submit {
+    background-color: #1e90ff;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #0d6efd;
+}
+
+/* ریسپانسیو */
+@media screen and (max-width: 768px){
+    .slider-form {
+        padding: 15px;
+    }
+
+    .slide-preview {
+        max-height: 150px;
+    }
+
+    .btn-submit {
+        width: 100%;
+    }
+}

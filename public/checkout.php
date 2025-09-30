@@ -13,20 +13,22 @@
         <!-- فرم ادرس و مشخصات-->
        <form action="#" class="checkout-form">
            <h2>اطلاعات ارسال سفارش</h2>
-           <label for="province">آدرس های شما</label>
-              <select id="user-address" name="user-address" required>
+           <label>آدرس های شما</label>
+              <select id="user-address" name="user-address" >
                 <option value="address-pesh">آدرس پیش فرض</option>
                 
               </select>
            <div class="row">
                <div class="col form-group">
-                   <label for="firstname" >نام</label>
-                   <input type="text" name="firstname" id="firstname" required placeholder = "نام">
-               </div>
+                   <label for="firstname" >نام </label>
+                   <input type="text" name="firstname" id="firstname" required placeholder = "نام" class = "input-check">
+                   <p class = "error-msg"></p>
+                  </div>
                <div class="col form-group">
                 <label for="firstname">نام خانوادگی</label>
-                <input type="text" name="lastName" id="lastName" required placeholder = "نام خانوادگی">
-               </div>
+                <input type="text" name="lastName" id="lastName" required placeholder = "نام خانوادگی" class = "input-check">
+                <p class = "error-msg"></p>
+              </div>
            </div>
            <div class="row">
             <div class="col form-group">
@@ -64,7 +66,7 @@
                 <option value="هرمزگان">هرمزگان</option>
                 <option value="همدان">همدان</option>
                 <option value="یزد">یزد</option>
-                <!-- بقیه استان‌ها -->
+                <p class = "error-msg"></p>
               </select>
             </div>
       
@@ -73,23 +75,29 @@
               <select id="city" name="city" required>
                 <option value="">ابتدا استان را انتخاب کنید</option>
               </select>
+              <p class = "error-msg"></p>
             </div>
           </div>
           <div class="form-group">
             <label for="address" >آدرس دقیق</label>
             <textarea name="address" id="address" rows="5" required></textarea>
+            <p class = "error-msg"></p>
           </div>
           <div class="form-group row" >
-            <label for="postal">شماره موبایل</label>
-            <input type="tel" id="postal" name="postal" placeholder = "09xxxxxxxxx">
-            <label for="postal">کد پستی</label>
-            <input type="text" id="postal" name="postal" placeholder = "کد پستی">
+            <label for="phone">شماره موبایل</label>
+            <input type="tel" id="phone" name="postal" placeholder = "09xxxxxxxxx" class = "input-check">
+            <p class = "error-msg"></p>
+            
+          </div>
+          <div class = "form-group">
+          <label for="postal">کد پستی</label>
+          <input type="text" id="postal" name="postal" placeholder = "کد پستی" class = "input-check">
+          <p class = "error-msg"></p>
           </div>
           <div class="form-group">
-            <label for="note">توضیحات (اختیاری)</label>
+            <label>توضیحات (اختیاری)</label>
             <textarea id="note" name="note" rows="4"></textarea>
           </div>
-
        </form>
          <!-- بخش خلاصه سفارش -->
          <div class="cart-summary">

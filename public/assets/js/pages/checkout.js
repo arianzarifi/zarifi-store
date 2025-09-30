@@ -1,6 +1,17 @@
 document.addEventListener('DOMContentLoaded' , () => {
-    const provinceSelect  = document.getElementById('province') ;
-    const citySelect  = document.getElementById('city') ;
+  const provinceSelect  = document.getElementById('province') ;
+  const citySelect  = document.getElementById('city') ;
+  const checkoutForm = document.querySelector('.checkout-form');
+  const btnCheckout = document.querySelector('.checkout-btn');
+
+  // فیلدها
+  const firstName = document.getElementById('firstname');
+  const lastName = document.getElementById('lastName');
+  const province = document.getElementById('province');
+  const city = document.getElementById('city');
+  const address = document.getElementById('address');
+  const phone = document.getElementById('phone');   // موبایل جدید
+  const postal = document.getElementById('postal');
     const provinceCities  = {
         "آذربایجان شرقی": ["تبریز", "مراغه", "مرند", "میانه", "اهر", "جلفا", "سراب", "شبستر", "کلیبر", "عجب‌شیر", "ورزقان", "بناب", "بستان‌آباد", "آذرشهر", "آبش احمد", "هادی‌شهر", "هریس", "هشترود"],
         "آذربایجان غربی": ["ارومیه", "خوی", "ماکو", "میاندوآب", "سلماس", "پیرانشهر", "بوکان", "شاهین‌دژ", "تکاب", "سردشت", "نقده"],
@@ -34,10 +45,9 @@ document.addEventListener('DOMContentLoaded' , () => {
         "همدان": ["همدان", "ملایر", "نهاوند", "کبودراهنگ", "بهار", "اسدآباد", "رزن", "فامنین"],
         "یزد": ["یزد", "میبد", "اردکان", "بافق", "مهریز", "ابرکوه", "تفت", "خاتم"]
       };
-      provinceSelect.addEventListener('change' , () => {
+      provinceSelect.addEventListener('change', () => {
         const selectedProvince = provinceSelect.value;
         citySelect.innerHTML = '<option value="">انتخاب شهر</option>';
-
         if (selectedProvince && provinceCities[selectedProvince]) {
             provinceCities[selectedProvince].forEach(city => {
                 const option = document.createElement('option');
@@ -46,5 +56,46 @@ document.addEventListener('DOMContentLoaded' , () => {
                 citySelect.appendChild(option);
             });
         }
-      }) ;
-}) ;
+    });
+
+    // مدیریت خطا
+    function showError(input, message) {
+        let errorElem = input.parentElement.querySelector('.error-msg');
+        if (errorElem) errorElem.textContent = message;
+    }
+    function clearError(input) {
+        let errorElem = input.parentElement.querySelector('.error-msg');
+        if (errorElem) errorElem.textContent = '';
+    }
+
+    function validateForm() {
+        let isValid = true;
+        [firstName, lastName, province, city, address, phone, postal].forEach(f => clearError(f));
+
+        if (!firstName.value.trim()) { showError(firstName, 'نام الزامی است'); isValid=false; }
+        if (!lastName.value.trim()) { showError(lastName, 'نام خانوادگی الزامی است'); isValid=false; }
+        if (!province.value.trim()) { showError(province, 'استان الزامی است'); isValid=false; }
+        if (!city.value.trim()) { showError(city, 'شهر الزامی است'); isValid=false; }
+        if (!address.value.trim()) { showError(address, 'آدرس الزامی است'); isValid=false; }
+        if (!/^09\d{9}$/.test(phone.value.trim())) { showError(phone, 'شماره موبایل معتبر وارد کنید'); isValid=false; }
+        if (postal.value.trim() && !/^\d{10}$/.test(postal.value.trim())) {
+            showError(postal, 'کد پستی باید ۱۰ رقم باشد'); isValid=false;
+        }
+        if(!postal.value.trim()){showError(postal , "کد پستی الزامی است"); isValid=false;} 
+        if(/^(\d)\1{9}$/.test(postal.value.trim())){
+          showError(postal , "کد پستی نمیتواند همه ارقام یکسان باشد");isValid=false;
+        }
+        if(/^0/.test(postal.value.trim())){
+          showError(postal , "کد پستی نباید با صفر شروع شود");isValid=false;
+        }
+
+        return isValid;
+    }
+
+    btnCheckout.addEventListener('click', () => {
+        if (validateForm()) {
+            console.log('فرم معتبره فر.شگاه دیجیکالا بزرگه به نظرم برای این فروشگاه در این حد لازم نیست ');
+            checkoutForm.submit();
+        }
+    });
+    });
